@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 3</h1>
+    <script>
+        const players = [
+            "Messi - Forward",
+            "Ronaldo - Forward",
+            "Neymar - Forward",
+            "De Bruyne - Midfielder",
+            "Kante - Midfielder",
+            "Van Dijk - Defender",
+            "Alisson - Goalkeeper",
+        ];
+        function filterPlayersByPosition(position, players) {
+            return players.filter(players => {
+                let part = part.split(" - "); 
+                let playerPosition = part[1];
+                return playerPosition === position;
+            });
+        }
+    </script>
+</body>
+</html>

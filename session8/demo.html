@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //hàm nhận vào hoặc trả về hàm khác là HOF
+      //các phương thức trong hàm của JS
+      let student = ["abc", "def", "sigma", "gay"];
+      let scores = [8, 9, 6, 7];
+      //1.for...each dùng để lặp qua từng phần tử để thực thi
+        student.forEach(function(element, index, arr){//khai báo hàm ngay ở đây nếu khai báo hàm rồi đặt vào thì sẽ không nhận tham số đặc biệt
+            console.log("Gia tri phan tu: ", element);
+            console.log("Chi so phan tu: ", index);
+            console.log("Mang ban dau: ", arr);
+            
+        })
+        //student.forEach((element, index, arr)=>{}) cách khai báo khác của hàm
+
+    //2.map
+    let newScore = scores.map((element, index)=>element)
+    console.log(newScore);
+    
+    //3.filter dùng để tìm nhiều
+    let temp = students.filter((element, index)=>true)
+    let good = scores.filter(element => element >= 9)//áp dụng cho bài toán tìm sv có điểm giỏi
+    console.log(temp);
+    
+    //4.some có ít nhất một điều kiện đúng thì sẽ đúng & every tất cả điều kiện phải đúng
+    let check = scores.every((element)=>element>=0)//có logic thì thêm ngoặc nhọn và return
+    let checkk = scores.some((element) => element < 0) 
+    console.log(check);
+    
+    //5.find & findIndex dùng để tìm 1
+    let findStudent = student.find((element) => element === "sigma")
+    let findIndexStudent = students.findIndex((element)=>element==="abc")
+    console.log(findStudent);
+    console.log(findIndexStudent);
+    
+    //6.reduce - đóng gói mảng thành 1 giá trị duy nhất 
+    let totalScore = scores.reduce((accumulative/*giá trị tích lũy*/, element, index) => {
+        accumulative += element;
+        console.log("Gia tri tich luy sau phan thu tu: ", index);
+        
+        return accumulative /*+ element thì vẫn ra đáp án giống như trên (Ngắn gọn hơn)*/;
+    }, 0)
+    console.log(totalScore);
+    
+    </script>
+</body>
+</html>
